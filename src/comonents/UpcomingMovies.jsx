@@ -8,7 +8,6 @@ function UpcomingMovies(){
 
 const [movies,getMovie] = useState([]);
 
-console.log("ENV" ,process.env.API_KEY) 
 
 
 var date = new Date();
@@ -31,7 +30,7 @@ var date = new Date();
 
 useEffect(() => {
     fetchUpcomingMovies()
-},[])
+},[fetchUpcomingMovies])
 
     return(
       <div className="container mx-auto px-4 pt-16 pb-16">
