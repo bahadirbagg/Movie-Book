@@ -25,12 +25,11 @@ var date = new Date();
  const fetchUpcomingMovies = async() => {
   const response = await axios.get(`https://api.themoviedb.org/3/discover/movie?primary_release_date.gte=${dateString}&primary_release_date.lte=${nextMonth}&api_key=4eb490f3e0e767726c90fddf79671fa1`)
   getMovie(response.data.results)
-  console.log("upcoming data",response.data.results)
 }
 
 useEffect(() => {
     fetchUpcomingMovies()
-},[fetchUpcomingMovies])
+},[])
 
     return(
       <div className="container mx-auto px-4 pt-16 pb-16">

@@ -14,7 +14,7 @@ const fetchUpcomingMovies = async() => {
   
   useEffect(() => {
       fetchUpcomingMovies()
-  })
+  },[])
 
 
     return(

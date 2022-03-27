@@ -11,7 +11,6 @@ function PopularMovies(){
  const fetchPopularMovies = async() => {
    const response = await axios.get(`https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=4eb490f3e0e767726c90fddf79671fa1`)
    getMovie(response.data.results)
-   console.log("popular data",response.data.results)
  }
 
 useEffect(() => {
