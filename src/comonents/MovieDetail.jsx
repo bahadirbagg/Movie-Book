@@ -9,7 +9,7 @@ const IMAGE_PATH = 'https://image.tmdb.org/t/p/original';
 const fetchUpcomingMovies = async() => {
     const response = await axios.get(`https://api.themoviedb.org/3/movie/${idm.match.params.id}?api_key=4eb490f3e0e767726c90fddf79671fa1&language=en-US`)
     getMovie(response.data)
-    console.log("detail data movies",response.data)
+    //console.log("detail data movies",response.data)
   }
   
   useEffect(() => {
@@ -19,14 +19,14 @@ const fetchUpcomingMovies = async() => {
 
     return(
         <div className="movie-details">
-            <div className="container max-w-4xl mx-auto p-16" >
+            <div className="container sm:max-w-4xl md:max-w-4xl mx-auto p-16" >
                 <div>
-                    <img src={IMAGE_PATH + movies.backdrop_path} alt="bla"  height={600} width={1000}/>
+                    <img src={IMAGE_PATH + movies.backdrop_path} alt={movies.original_title}  height={600} width={1000}/>
                 </div>
                 <div className="mt-6">
-                    <h1 className="text-2xl mb-5 text-orange-600">{movies.title}</h1>
-                    <p className=" text-white"> {movies.overview}</p>
-                    <p className="mt-5 text-cyan-100">Genres: <span className="text-white">{movies.genres?.map((genre) => genre.name).join(", ")}</span></p>
+                    <h1 className="text-2xl md:text-2xl mb-5 text-orange-600">{movies.title}</h1>
+                    <p className="text-sm md:text-xl text-white"> {movies.overview}</p>
+                    <p className="text-xs md:text-sm mt-5 text-cyan-100">Genres: <span className="text-white">{movies.genres?.map((genre) => genre.name).join(", ")}</span></p>
                 </div>
             </div>
         </div>

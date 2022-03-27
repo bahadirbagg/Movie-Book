@@ -9,7 +9,6 @@ const [movies,getMovie] = useState([]);
 
 
 
-
 var date = new Date();
 
 	var d = date.getDate();
@@ -27,6 +26,8 @@ var date = new Date();
   const response = await axios.get(`https://api.themoviedb.org/3/discover/movie?primary_release_date.gte=${lastMonth}&primary_release_date.lte=${dateString}&api_key=4eb490f3e0e767726c90fddf79671fa1`)
   getMovie(response.data.results)
 }
+
+console.log("detail on cinema",movies)
 
 useEffect(() => {
   fetchLiveMovies()

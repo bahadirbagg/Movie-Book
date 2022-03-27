@@ -1,6 +1,6 @@
 import React,{useEffect, useState} from "react";
 import axios from "axios";
-import MovieCard from "./MovieCard";
+import MovieCard2 from "./MovieCard2";
 
 
 
@@ -36,7 +36,7 @@ useEffect(() => {
         <div className="popular-movies">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">
             {movies.map((movie,i) => 
-              <MovieCard movies={movie} key={i}/>
+              <MovieCard2 movies={movie} key={i}/>
             )}
           </div>
         </div>

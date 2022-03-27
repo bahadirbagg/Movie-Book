@@ -8,17 +8,17 @@ function Header(){
                 <ul className="flex flex-col md:flex-row items-center">
                     <li>
                         <Link to="/">
-                            <p className="sm:text-3xl md:text-3xl lg:text-4xl font-bold">Movie
+                            <p className="text-3xl md:text-3xl lg:text-4xl font-bold">Movie
                                 <span className="text-red-600">Book</span>
                             </p>
                         </Link>    
                     </li>
-                    <li className="mt-3 md:ml-28 md:mt-0 md:flex-col border-2  border-gray-600  rounded-md " >
+                    <li className="mt-3 text-sm md:ml-28 md:mt-0 md:flex-col border-2  border-gray-600  rounded-md " >
                         <Link to="/MoviesOnCinema">
                             <p className="p-1">Movies On Cinema</p>
                         </Link>
                     </li>
-                    <li className="mt-3 mb-3 md:ml-5 md:mt-0 md:mb-0 md:flex-col border-2  border-gray-600  rounded-md ">
+                    <li className="mt-3 text-sm mb-3 md:ml-5 md:mt-0 md:mb-0 md:flex-col border-2  border-gray-600  rounded-md ">
                         <Link to="/UpcomingMovies">
                             <p className="p-1">Upcoming Movies</p>
                         </Link>
