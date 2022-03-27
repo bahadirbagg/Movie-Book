@@ -4,6 +4,8 @@ import {Link} from "react-router-dom"
 function MovieCard({movies}){
 
     const IMAGE_PATH = 'https://image.tmdb.org/t/p/w500';
+
+    
     return(
         <div className="mt-8 relative overflow-hidden"    >
             <Link to={`/details/${movies.id}`}>

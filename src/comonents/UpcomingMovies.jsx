@@ -3,11 +3,12 @@ import axios from "axios";
 import MovieCard from "./MovieCard";
 
 
+
 function UpcomingMovies(){
 
 const [movies,getMovie] = useState([]);
 
-
+console.log("ENV" ,process.env.API_KEY) 
 
 
 var date = new Date();
@@ -23,7 +24,7 @@ var date = new Date();
 
  
  const fetchUpcomingMovies = async() => {
-  const response = await axios.get(`https://api.themoviedb.org/3/discover/movie?primary_release_date.gte=${dateString}&primary_release_date.lte=${nextMonth}&api_key=${process.env.API_KEY}`)
+  const response = await axios.get(`https://api.themoviedb.org/3/discover/movie?primary_release_date.gte=${dateString}&primary_release_date.lte=${nextMonth}&api_key=4eb490f3e0e767726c90fddf79671fa1`)
   getMovie(response.data.results)
   console.log("upcoming data",response.data.results)
 }

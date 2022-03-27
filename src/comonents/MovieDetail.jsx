@@ -1,6 +1,5 @@
 import axios from "axios";
 import React,{useEffect, useState} from "react";
-import MoviesOnCinema from "./MoviesOnCinema";
 
 function MovieDetail(idm){
     const [movies,getMovie] = useState([]);
@@ -15,7 +14,7 @@ const fetchUpcomingMovies = async() => {
   
   useEffect(() => {
       fetchUpcomingMovies()
-  },[])
+  })
 
 
     return(
