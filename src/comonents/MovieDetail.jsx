@@ -7,7 +7,7 @@ function MovieDetail(idm){
 const IMAGE_PATH = 'https://image.tmdb.org/t/p/original';
 
 const fetchUpcomingMovies = async() => {
-    const response = await axios.get(`https://api.themoviedb.org/3/movie/${idm.match.params.id}?api_key=${process.env.API_KEY}&language=en-US`)
+    const response = await axios.get(`https://api.themoviedb.org/3/movie/${idm.match.params.id}?api_key=4eb490f3e0e767726c90fddf79671fa1&language=en-US`)
     getMovie(response.data)
     console.log("detail data movies",response.data)
   }
