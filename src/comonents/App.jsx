@@ -4,6 +4,7 @@ import MoviesOnCinema from "./MoviesOnCinema";
 import UpcomingMovies from "./UpcomingMovies";
 import MovieDetail from "./MovieDetail"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
+import SearchMovies from "./SearchMovies";
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
         <Header/>
         <Switch>
           <Route path="/" exact component={PopularMovies}/>
+          <Route path="/search/:search" component={SearchMovies}/>
           <Route path="/MoviesOnCinema" exact component={MoviesOnCinema}/>
           <Route path="/UpcomingMovies" exact component={UpcomingMovies}/>
           <Route path="/details/:id" component={MovieDetail}/>

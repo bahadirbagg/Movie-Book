@@ -1,11 +1,9 @@
 import React from "react";
 import {Link} from "react-router-dom"
+import {IMAGE_PATH} from "../API"
 
 function MovieCard({movies}){
 
-    const IMAGE_PATH = 'https://image.tmdb.org/t/p/w500';
-
-    
     return(
         <div className="mt-8 relative overflow-hidden"    >
             <Link to={`/details/${movies.id}`}>
